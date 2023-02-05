@@ -10,7 +10,7 @@ const LmDB = {
 		let newData = null
 		loop_()
 		function loop_(){
-			fetch('lmdb/data.json')
+			fetch('https://lmdb.rf.gd/data.json')
 			.then(d=>d.text())
 			.then(d1=>data_(d1))
 			function data_(d){
@@ -34,7 +34,7 @@ const LmDB = {
 		`)
 		console.log(LmDB._d_)
 
-		fetch('lmdb/rtdb.php?data='+JSON.stringify(LmDB._d_))
+		fetch('https://lmdb.rf.gd/rtdb.php?data='+JSON.stringify(LmDB._d_))
 		.catch(e=>console.error(e))
 	},
 	get: function(ref){
